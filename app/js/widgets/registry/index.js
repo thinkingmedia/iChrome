@@ -9,7 +9,7 @@
  * them automatically. Instead, they're manually included in the built file.
  */
 var widgets = [
-	"drive", "rss", "news", "weather", "stocks", "translate", "sports"
+	"drive", "rss", "news", "weather", "stocks", "translate", "sports", "whatsmyip"
 ].map(function(e) {
 	return "json!w/" + e + "/manifest.json";
 });

@@ -1,0 +1,41 @@
+{
+	"id": 999,
+	"name": "whatsmyip",
+	"model": "model",
+	"css": "style.css",
+	"icon": "icon.png",
+	"sizes": ["variable"],
+
+	"views": {
+		"default": "view"
+	},
+
+	"templates": {
+		"desc": "templates/desc.hjs",
+		"default": "templates/main.hjs"
+	},
+
+	"strings": {
+		"en": {
+			"name": "WhatsMyIP",
+			"desc": "Displays your public IP address.",
+
+			"settings": {
+				"page_title": "Settings",
+				"save": "Save",
+
+				"title": "Widget Title",
+				"title_placeholder": "Enter a widget title or leave blank to hide",
+
+				"link": "Title Link",
+				"link_placeholder": "Enter a link for the widget title"
+			},
+
+			"by": "By",
+
+			"all_articles": "All articles",
+
+			"feed_error": "An error occurred while trying to fetch the feed at: %s.\r\nPlease double check the URL and/or modify the widget settings."
+		}
+	}
+}

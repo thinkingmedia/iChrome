@@ -1,6 +1,6 @@
-/.idea
 lib-cov
 coverage
+.idea
 .grunt
 .lock-wscript
 build/Release
