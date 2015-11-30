@@ -4,7 +4,9 @@ define(["lodash", "widgets/views/main"], function(_, WidgetView) {
 		},
 
         onBeforeRender: function(data, demo) {
-            //data.title = 'Hello World';
+            if(demo) {
+                data.address = '192.168.1.1'
+            }
             return data;
         }
 

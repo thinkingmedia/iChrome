@@ -2,7 +2,7 @@ define(["lodash", "jquery", "widgets/model"], function(_, $, WidgetModel) {
 	return WidgetModel.extend({
 		defaults: {
 			config: {
-				title: "Lifehacker",
+				title: "Whats My IP",
 				link: "",
 				number: 5,
 				view: "default",
@@ -12,7 +12,6 @@ define(["lodash", "jquery", "widgets/model"], function(_, $, WidgetModel) {
 				url: "http://feeds.gawker.com/lifehacker/full"
 			}
 		},
-
 
 		/**
 		 * Initialize
@@ -25,7 +24,12 @@ define(["lodash", "jquery", "widgets/model"], function(_, $, WidgetModel) {
 				delete this.config.view;
 			}
 
-            this.set('title','Amazing');
+            this.saveData({
+                title: 'Whats My IP',
+                address: '129.168.12.32',
+                loading: false
+            });
+
 			//this.set("activeTab", 0);
 			//this.on("change", function(model, options) {
 			//}, this);
