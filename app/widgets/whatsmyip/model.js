@@ -33,8 +33,7 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
                 return;
             }
 
-            this.set('loading', true, { widgetChange: true });
-            this.set('error', false, { widgetChange: true });
+            this.trigger('refresh:start', this, { widgetChange: true });
 
             $.ajax({
                 url: this.config.provider,
@@ -44,20 +43,19 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
                 success: function (data, textStatus, jqHXR) {
                     var matches = (data || "").match(matchIPV4);
                     if (jqHXR.status != 200 || !_.isArray(matches) || matches.length == 0) {
-                        self.set('error', true, { widgetChange: true });
+                        self.trigger('refresh:failed', self, { widgetChange: true });
                         return;
                     }
 
-                    self.data.address = _.first(matches);
+                    self.data.address = matches[0];
                     self.saveData();
 
                     console.log(matches);
+
+                    self.trigger('refresh:finish', self, { widgetChange: true });
                 },
                 error: function () {
-                    self.set('error', true, { widgetChange: true });
-                },
-                complete: function () {
-                    self.set('loading', false, { widgetChange: true });
+                    self.trigger('refresh:failed', self, { widgetChange: true });
                 }
             });
         }
