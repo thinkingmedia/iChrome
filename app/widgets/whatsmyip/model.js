@@ -16,26 +16,25 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
          * Initialize
          */
         initialize: function () {
-            /*
-             if (this.config.view) {
-             delete this.config.view;
-             }
-             */
+            WidgetModel.prototype.initialize.call(this);
+
             this.saveData({
                 title: this.config.title || this.defaults.config.title,
-                address: '###.###.###.###',
-                loading: false,
-                error: false
+                address: '###.###.###.###'
             });
-
-            WidgetModel.prototype.initialize.call(this);
         },
 
         refresh: function () {
             var self = this;
 
-            this.data.loading = true;
-            this.saveData();
+            console.log('refreshing');
+
+            if(!this.config.provider) {
+                return;
+            }
+
+            this.set('loading', true);
+            this.set('error', false);
 
             $.ajax({
                 url: this.config.provider,
@@ -43,29 +42,24 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
                 cache: false,
                 dataType: "text",
                 success: function (data, textStatus, jqHXR) {
-                    if (jqHXR.status != 200) {
-                        self.failIP();
+                    var matches = (data || "").match(matchIPV4);
+                    if (jqHXR.status != 200 || !_.isArray(matches) || matches.length == 0) {
+                        self.set('error', true);
+                        return;
                     }
-                    var matches = data.match(matchIPV4);
-                    if (!_.isArray(matches) || matches.length == 0) {
-                        self.failIP();
-                    }
+
                     self.data.address = _.first(matches);
-                    self.saveData();
+                    //self.saveData();
+
                     console.log(matches);
                 },
                 error: function () {
-                    self.failIP();
+                    self.set('error', true);
                 },
                 complete: function () {
-                    self.data.loading = true;
-                    self.saveData();
+                    self.set('loading', false);
                 }
             });
-        },
-
-        failIP: function () {
-
         }
     });
 });
