@@ -1,38 +1,71 @@
-define(["lodash", "jquery", "widgets/model"], function(_, $, WidgetModel) {
-	return WidgetModel.extend({
-		defaults: {
-			config: {
-				title: "Whats My IP",
-				link: "",
-				number: 5,
-				view: "default",
-				images: "true",
-				desc: "true",
-				size: "variable",
-				url: "http://feeds.gawker.com/lifehacker/full"
-			}
-		},
+define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
 
-		/**
-		 * Initialize
-		 */
-		initialize: function() {
+    var matchIPV4 = /(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/gi;
 
-            console.log('my model');
+    return WidgetModel.extend({
 
-			if (this.config.view) {
-				delete this.config.view;
-			}
+        defaults: {
+            config: {
+                size: "variable",
+                provider: "http://checkip.dyndns.org/",
+                title: "Whats My IP"
+            }
+        },
 
+        /**
+         * Initialize
+         */
+        initialize: function () {
+            /*
+             if (this.config.view) {
+             delete this.config.view;
+             }
+             */
             this.saveData({
-                title: 'Whats My IP',
-                address: '129.168.12.32',
-                loading: false
+                title: this.config.title || this.defaults.config.title,
+                address: '###.###.###.###',
+                loading: false,
+                error: false
             });
 
-			//this.set("activeTab", 0);
-			//this.on("change", function(model, options) {
-			//}, this);
-		}
-	});
+            WidgetModel.prototype.initialize.call(this);
+        },
+
+        refresh: function () {
+            var self = this;
+
+            this.data.loading = true;
+            this.saveData();
+
+            $.ajax({
+                url: this.config.provider,
+                method: "GET",
+                cache: false,
+                dataType: "text",
+                success: function (data, textStatus, jqHXR) {
+                    if (jqHXR.status != 200) {
+                        self.failIP();
+                    }
+                    var matches = data.match(matchIPV4);
+                    if (!_.isArray(matches) || matches.length == 0) {
+                        self.failIP();
+                    }
+                    self.data.address = _.first(matches);
+                    self.saveData();
+                    console.log(matches);
+                },
+                error: function () {
+                    self.failIP();
+                },
+                complete: function () {
+                    self.data.loading = true;
+                    self.saveData();
+                }
+            });
+        },
+
+        failIP: function () {
+
+        }
+    });
 });

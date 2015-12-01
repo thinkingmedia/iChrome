@@ -15,12 +15,28 @@
 		"default": "templates/main.hjs"
 	},
 
+    "settings": [{
+      "type": "size"
+    }, {
+      "type": "select",
+      "name": "provider",
+      "label": "i18n.settings.providers",
+      "options": {
+        "http://checkip.dyndns.org/": "dyndns.org",
+        "https://api.ipify.org?format=text": "ipify.org",
+        "http://icanhazip.com/": "icanhazip.com",
+        "http://bot.whatismyipaddress.com/": "whatismyipaddress.com"
+      }
+    }],
+
 	"strings": {
 		"en": {
 			"name": "WhatsMyIP",
 			"desc": "Displays your public IP address.",
 
 			"settings": {
+                "providers": "Providers",
+
 				"page_title": "Settings",
 				"save": "Save",
 
