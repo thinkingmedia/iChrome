@@ -4,6 +4,11 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
 
     return WidgetModel.extend({
 
+        /**
+         * Once per hour.
+         */
+        refreshInterval: 3600000,
+
         defaults: {
             config: {
                 size: "variable",
@@ -26,8 +31,6 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
 
         refresh: function () {
             var self = this;
-
-            console.log('refreshing');
 
             if(!this.config.provider) {
                 return;
