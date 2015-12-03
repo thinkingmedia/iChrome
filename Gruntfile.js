@@ -1,7 +1,8 @@
+var _ = require('lodash');
+
 /**
  * @param {IGrunt} grunt
  */
-/* globals module,process */
 module.exports = function (grunt) {
     var path = require("path");
 
@@ -36,7 +37,7 @@ module.exports = function (grunt) {
                 futurehostile: true,
                 reporter: require("jshint-stylish")
             },
-			all: ["app/**/*.js", "!node_modules/**/*.js", "!app/js/lib/*.js"]
+		all: ["app/**/*.js", "!node_modules/**/*.js", "!app/js/lib/*.js"]
 		},
 
 		// compile SASS files
