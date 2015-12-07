@@ -1,22 +1,6 @@
 {
 	"lang_code": "en-widgets",
 
-	"analytics": {
-		"name": "Analytics",
-		"desc": "Displays various metrics from a Google Analytics profile.",
-
-		"sessions": "sessions",
-		"pageviews": "Pageviews",
-		"pagesvisit": "Pages/visit",
-		"bouncerate": "Bounce Rate",
-		"completions": "Completions",
-		"noprofile": "It doesn't look like you selected a profile yet!\n<br /><br />\nTry selecting one via the wrench icon in the top right.",
-
-		"settings": {
-			"profile": "Profile"
-		}
-	},
-
 	"apps": {
 		"name": "Apps",
 		"desc": "Displays your currently installed Google Chrome applications.",
@@ -159,14 +143,6 @@
 		"enable_audio": "Enable audio"
 	},
 
-	"currency": {
-		"name": "Currency",
-		"desc": "Let's you convert between any two of 169 currencies.",
-
-		"to_label": "to",
-		"recently_used": "Recently Used"
-	},
-
 	"facebook": {
 		"name": "Facebook",
 		"desc": "Embeds Facebook in a widget"
@@ -193,13 +169,13 @@
 				"cards": "Cards",
 				"cards_columns": "Cards (two columns)"
 			},
-			
+
 			"mark": "Mark an article as read when I",
 			"mark_options": {
 				"scroll": "Scroll past it or click it",
 				"click": "Just click it"
 			},
-			
+
 			"sort": "Sort Order",
 			"sort_options": {
 				"newest": "Newest first",
@@ -281,16 +257,6 @@
 		"desc": "Displays your Google Notifications from services such as Google+"
 	},
 
-	"recentlyclosed": {
-		"name": "Recently Closed",
-		"desc": "Shows your recently closed tabs",
-
-		"settings": {
-			"tabs": "Tabs Shown",
-			"open": "Open tabs in"
-		}
-	},
-
 	"reddit": {
 		"name": "Reddit",
 		"desc": "Displays the top items on Reddit for any given subreddit.",
@@ -322,29 +288,6 @@
 		"more": "More"
 	},
 
-	"todo": {
-		"name": "To-do",
-		"desc": "Displays an interactive to-do list with important and completed items.",
-
-		"title": "To-do list",
-
-		"settings": {
-			"color": "Font Color",
-			"color_options": {
-				"light": "Light",
-				"dark": "Dark"
-			},
-
-			"tags": "Tags",
-			"tags_placeholder": "Enter a tag name and press Enter"
-		},
-
-		"add": "Add Item",
-
-		"none": "None",
-		"important": "Important"
-	},
-
 	"tasks": {
 		"name": "Tasks",
 		"desc": "Displays an editable list of tasks from one of your Google Tasks lists.",
@@ -370,16 +313,6 @@
 		"overdue": "Overdue",
 
 		"authorize": "You'll need to select a list from your Google Tasks via the settings before anything can be displayed here."
-	},
-
-	"topsites": {
-		"name": "Top Sites",
-		"desc": "Displays your most visited/top sites.",
-
-		"settings": {
-			"show": "Number of sites shown",
-			"open": "Open sites in"
-		}
 	},
 
 	"traffic": {

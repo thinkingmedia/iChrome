@@ -1,6 +1,24 @@
 /*---------------------------------------------
 	/ Main Styles
 */
+:root {
+	font-family: inherit;
+}
+
+.files {
+	padding: 0;
+	max-height: 600px;
+	overflow-x: hidden;
+}
+
+.medley .files {
+	max-height: 100%;
+}
+
+.medley .header ~ .files {
+	max-height: calc(100% - 45px);
+}
+
 .file {
 	color: #333;
 	display: block;

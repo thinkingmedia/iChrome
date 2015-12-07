@@ -24,16 +24,26 @@
 */
 .widget .header {
 	color: #666;
-	font-size: 16px;
-	margin-bottom: 10px;
-	font-family: Open Sans, sans-serif;
+	padding: 0 15px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 45px;
+	font-family: inherit;
 }
 
 .dark .widget .header {
 	color: #EEE;
 }
 
-.widget.tiny .header {
+.widget.legacy .header {
+	padding: 0;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	font-family: Open Sans, sans-serif;
+}
+
+.widget.legacy.tiny .header {
 	font-size: 15px;
 	line-height: 15px;
 	margin-bottom: 15px;
@@ -144,14 +154,12 @@
 /*---------------------------------------------
 	/ List style widgets
 */
-.drive h2.header,
 .twitter h2.header,
 .widget.reddit h2.header,
 .widget.feedly h2.header {
 	margin-bottom: 25px;
 }
 
-.drive .files,
 .reddit .items,
 .feedly .items,
 .twitter .tweets {
@@ -161,7 +169,6 @@
 	overflow-x: hidden;
 }
 
-.medley .drive .files,
 .medley .reddit .items,
 .medley .feedly .items,
 .medley .twitter .tweets {
@@ -170,7 +177,6 @@
 
 .medley .reddit .items,
 .medley .feedly .items,
-.medley .drive .header ~ .files,
 .medley .twitter .header ~ .tweets {
 	max-height: calc(100% - 12px);
 }
@@ -994,7 +1000,7 @@
 				20.39509px	62.76974px	#333,	13.72213px	64.55775px	#333,	6.89884px	65.63845px	#333,
 				-6.89893px	65.63844px	#333,	-13.72222px	64.55773px	#333,	-20.39517px	62.76971px	#333,
 				-26.84467px	60.29398px	#333,	-38.79388px	53.39509px	#333,	-44.16267px	49.04751px	#333,
-				-49.0476px	44.16257px	#333,	-53.39516px	38.79377px	#333,	-60.29403px	26.84455px	#333,	
+				-49.0476px	44.16257px	#333,	-53.39516px	38.79377px	#333,	-60.29403px	26.84455px	#333,
 				-62.76975px	20.39505px	#333,	-64.55776px	13.72209px	#333,	-65.63845px	6.89879px	#333,
 				-65.63844px	-6.89897px	#333,	-64.55772px	-13.72226px	#333,	-62.7697px	-20.39521px	#333,
 				-60.29396px	-26.84471px	#333,	-53.39506px	-38.79391px	#333,	-49.04749px	-44.1627px	#333,
@@ -1043,12 +1049,12 @@
 	-webkit-animation: clock-rotate 60s normal infinite steps(60, end);
 }
 
-@keyframes clock-rotate { 
+@keyframes clock-rotate {
 	0% { transform: translate(0, 0) rotate(0deg) translate(0, 0); }
 	100% { transform: translate(0, 0) rotate(360deg) translate(0, 0); }
 }
 
-@-webkit-keyframes clock-rotate { 
+@-webkit-keyframes clock-rotate {
 	0% { transform: translate(0, 0) rotate(0deg) translate(0, 0); }
 	100% { transform: translate(0, 0) rotate(360deg) translate(0, 0); }
 }
@@ -1196,38 +1202,6 @@
 	white-space: nowrap;
 }
 
-
-
-
-
-/*---------------------------------------------
-	/ Analytics
-*/
-.analytics .mainval {
-	font-size: 95px;
-	margin-bottom: 15px;
-}
-
-.analytics .no-profile.header {
-	margin: 5px;
-	font-size: 14px;
-	line-height: 20px;
-}
-
-.analytics .details div:after {
-	text-transform: lowercase;
-}
-
-
-
-
-
-/*---------------------------------------------
-	/ Analytics / Tiny
-*/
-.analytics.tiny .mainval {
-	margin-bottom: 0;
-}
 
 
 
@@ -1465,53 +1439,6 @@
 .apps .tiles .title {
 	display: block;
 	margin-top: 5px;
-}
-
-
-
-
-
-/*---------------------------------------------
-	/ Top Sites
-*/
-.widget.topsites h2.header {
-	margin-bottom: 25px;
-}
-
-.topsites .sites {
-	margin: -15px;
-	display: block;
-}
-
-.topsites .site {
-	color: #666;
-	display: block;
-	padding: 10px 15px;
-	text-decoration: none;
-	font-family: Open Sans, sans-serif;
-}
-
-.dark .topsites .site {
-	color: #EEE;
-}
-
-.topsites .site:hover {
-	background: rgba(0, 0, 0, 0.03);
-}
-
-.topsites .favicon {
-	width: 16px;
-	margin-right: 5px;
-	border-radius: 2px;
-}
-
-.topsites .title {
-	overflow: hidden;
-	white-space: nowrap;
-	display: inline-block;
-	vertical-align: middle;
-	text-overflow: ellipsis;
-	width: calc(100% - 25px);
 }
 
 
@@ -2074,208 +2001,6 @@ body.no-edit .bookmarks .tools {
 
 
 /*---------------------------------------------
-	/ To do
-*/
-.widget.todo {
-	overflow: visible;
-}
-
-.widget.todo h2.header {
-	margin-bottom: 25px;
-}
-
-.todo .new {
-	opacity: 0;
-	float: right;
-	font-size: 14px;
-	margin-right: 10px;
-	transition: opacity .3s ease-in-out;
-}
-
-.todo:hover .new {
-	opacity: 1;
-}
-
-.todo .list {
-	color: #666;
-	margin: -15px;
-	display: block;
-}
-
-.dark.transparent .todo .list {
-	color: #BBB;
-}
-
-.todo .item {
-	height: 40px;
-	display: block;
-	padding: 10px 15px;
-	position: relative;
-	text-decoration: none;
-	font-family: Open Sans, sans-serif;
-}
-
-.todo .item:hover {
-	background: rgba(0, 0, 0, 0.03);
-}
-
-.dark .todo .item:hover {
-	background: rgba(0, 0, 0, 0.15);
-}
-
-.todo .item.dragged {
-	cursor: pointer;
-	position: absolute;
-	background: #F7F7F7;
-}
-
-.todo .item.holder {
-	border: 1px solid #F3F3F3;
-	border-width: 1px 0;
-}
-
-.todo .check {
-	width: 10px;
-	font-size: 16px;
-	margin-right: 10px;
-	font-family: Entypo;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.todo .check:hover {
-	cursor: pointer;
-}
-
-.todo .title {
-	overflow: hidden;
-	border: 0!important;
-	padding: 0!important;
-	display: inline-block;
-	vertical-align: middle;
-	text-overflow: ellipsis;
-	background: rgba(0, 0, 0, 0);
-	width: calc(100% - 25px)!important;
-	font-family: Open Sans, sans-serif!important;
-}
-
-.todo .item:hover .title {
-	width: calc(100% - 100px)!important;
-}
-
-.todo .tools {
-	top: 0;
-	right: 0;
-	bottom: 0;
-	opacity: 0;
-	font-size: 20px;
-	line-height: 20px;
-	position: absolute;
-	font-family: Entypo;
-	padding: 10px 10px 10px 0;
-}
-
-.todo .item:hover .tools,
-.todo .item.dragged .tools {
-	opacity: 1;
-}
-
-.todo .tools span {
-	padding: 0 5px;
-}
-
-.todo .tools .delete:hover {
-	color: #E43431;
-	cursor: pointer;
-}
-
-.todo .tools .move:hover {
-	cursor: move;
-}
-
-
-
-
-
-
-/*---------------------------------------------
-	/ To do / Done and Important styles
-*/
-.todo .item.done .check {
-	color: #AAA;
-}
-
-.dark.transparent .todo .item.done .check {
-	color: #888;
-}
-
-.todo .item.done .title,
-.todo .item.important.done .title {
-	color: #AAA;
-	text-decoration: line-through;
-}
-
-.todo .item.important {
-	background-color: #FFECEC;
-}
-
-.dark .todo .item.important {
-	background-color: #443B3B;
-}
-
-.dark.transparent .todo .item.important {
-	background-color: rgba(228, 4, 0, 0.35);
-}
-
-.todo .item.important .title {
-	color: #E40400;
-}
-
-
-
-
-
-/*---------------------------------------------
-	/ To do / Tags
-*/
-.todo .tags {
-	top: 85%;
-	z-index: 1;
-	opacity: 0;
-	color: #444;
-	font-size: 12px;
-	min-width: 100px;
-	background: #FFF;
-	line-height: 15px;
-	position: absolute;
-	visibility: hidden;
-	right: calc(100% - 30px);
-	font-family: Open Sans, sans-serif;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
-	transition: opacity .2s .2s, visibility 0s .4s;
-}
-
-.todo .tags:hover,
-.todo .tools .tag:hover ~ .tags {
-	opacity: 1;
-	visibility: visible;
-	transition: opacity .2s 0s, visibility 0s 0s;
-}
-
-.todo .tags div {
-	padding: 5px 10px;
-	cursor: pointer;
-}
-
-.todo .tags div:hover {
-	background: #F7F7F7!important;
-}
-
-
-
-
-
-/*---------------------------------------------
 	/ Tasks
 */
 .widget.tasks h2.header {
@@ -2545,53 +2270,6 @@ body.no-edit .bookmarks .tools {
 	margin: 2px;
 	width: 20px;
 	height: 20px;
-}
-
-
-
-
-
-
-
-
-/*---------------------------------------------
-	/ Currency
-*/
-.currency .selectbar,
-.currency .inputs {
-	width: 100%;
-	font-size: 13px;
-	position: relative;
-	text-align: center;
-	display: inline-block;
-}
-
-.currency .inputs {
-	margin: 5px 0;
-}
-
-.currency select,
-.currency input {
-	z-index: 1;
-	float: left;
-	height: 34px;
-	font-size: 13px;
-	position: relative;
-	width: calc(50% - 15px);
-	padding: 5px 6px!important;
-}
-
-.currency select:last-child,
-.currency input:last-child {
-	float: right;
-}
-
-.currency span.to {
-	left: 0;
-	z-index: 0;
-	width: 100%;
-	bottom: -14px;
-	position: absolute;
 }
 
 
@@ -3292,56 +2970,6 @@ body.no-edit .bookmarks .tools {
 
 
 
-/*---------------------------------------------
-	/ Recently Closed
-*/
-.widget.recentlyclosed h2.header {
-	margin-bottom: 25px;
-}
-
-.recentlyclosed .items {
-	margin: -15px;
-	display: block;
-}
-
-.recentlyclosed .item {
-	color: #666;
-	display: block;
-	padding: 10px 15px;
-	text-decoration: none;
-	font-family: Open Sans, sans-serif;
-}
-
-.dark .recentlyclosed .item {
-	color: #EEE;
-}
-
-.recentlyclosed .item:hover {
-	background: rgba(0, 0, 0, .03);
-}
-
-.dark .recentlyclosed .item:hover {
-	background: rgba(0, 0, 0, .15);
-}
-
-.recentlyclosed .favicon {
-	width: 16px;
-	margin-right: 5px;
-	border-radius: 2px;
-}
-
-.recentlyclosed .title {
-	overflow: hidden;
-	white-space: nowrap;
-	display: inline-block;
-	vertical-align: middle;
-	text-overflow: ellipsis;
-	width: calc(100% - 25px);
-}
-
-
-
-
 
 
 
@@ -3473,8 +3101,8 @@ body.no-edit .bookmarks .tools {
 	text-decoration: none;
 }
 .widget.sitelink h2.header {
-	margin: 0;
 	padding: 12px;
+	margin: 0!important;
 }
 
 .sitelink .thumbnail {

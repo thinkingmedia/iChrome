@@ -2,11 +2,12 @@
 	/ Main Styles
 */
 :root {
+	padding: 15px;
 	overflow: visible!important;
-	font-family: Roboto, sans-serif;
 }
 
-.header {
+h2.header {
+	padding: 0;
 	line-height: 18px;
 }
 
