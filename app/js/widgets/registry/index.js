@@ -9,7 +9,7 @@
  * them automatically. Instead, they're manually included in the built file.
  */
 var widgets = [
-	"drive", "rss", "news", "weather", "stocks", "translate", "sports", "whatsmyip"
+	"drive", "rss", "news", "weather", "stocks", "translate", "sports", "whatsmyip",
 	"analytics", "dictionary", "recentlyclosed", "topsites", "todo",
 	"currency", "traffic", "unread", "voice"
 ].map(function(e) {
