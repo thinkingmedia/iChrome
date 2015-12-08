@@ -1,0 +1,59 @@
+.dark :root.settings form {
+	background: rgba(0, 0, 0, .15);
+}
+
+.settings header button.save {
+	float: right;
+	min-width: 60px;
+	margin: 12px -12px 12px 0;
+
+	form {
+		background: #FCFCFC;
+	}
+
+	.feeds input.add {
+		margin: 10px 16px 0;
+		width: calc(100% - 32px);
+
+		ul {
+			padding: 0;
+			margin: 8px 0;
+			overflow: auto;
+			max-height: 200px;
+		}
+
+		ul li {
+			display: block;
+			padding: 10px 20px;
+		}
+
+		ul li:hover {
+			background: rgba(0, 0, 0, .03);
+		}
+
+		li input {
+			border: 0 !important;
+			padding: 0 !important;
+			width: calc(100% - 32px);
+		}
+
+		li .name {
+			font-weight: 700;
+		}
+
+		li .url {
+			font-size: 12px;
+		}
+
+		ul li button.toggle {
+			margin: 0;
+			opacity: 0;
+			float: right;
+			margin-right: -5px;
+		}
+
+		ul li:hover button.toggle {
+			opacity: 1;
+		}
+	}
+}

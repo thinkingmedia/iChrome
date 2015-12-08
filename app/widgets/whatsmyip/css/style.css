@@ -1,0 +1,99 @@
+/*---------------------------------------------
+ / Main Styles
+*/
+/* line 4, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+:root {
+	padding: 0 !important;
+	font-family: Roboto, sans-serif;
+}
+
+/* line 9, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+.address {
+	font-size: 24px;
+	text-align: center;
+	color: black;
+}
+
+/* line 14, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+.address.loading {
+	color: blue;
+}
+
+/* line 17, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+.address.error {
+	color: red !important;
+}
+
+/* line 1, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.dark :root.settings form {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+/* line 5, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save {
+	float: right;
+	min-width: 60px;
+	margin: 12px -12px 12px 0;
+}
+
+/* line 10, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save form {
+	background: #FCFCFC;
+}
+
+/* line 14, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add {
+	margin: 10px 16px 0;
+	width: calc(100% - 32px);
+}
+
+/* line 18, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add ul {
+	padding: 0;
+	margin: 8px 0;
+	overflow: auto;
+	max-height: 200px;
+}
+
+/* line 25, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add ul li {
+	display: block;
+	padding: 10px 20px;
+}
+
+/* line 30, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add ul li:hover {
+	background: rgba(0, 0, 0, 0.03);
+}
+
+/* line 34, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add li input {
+	border: 0 !important;
+	padding: 0 !important;
+	width: calc(100% - 32px);
+}
+
+/* line 40, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add li .name {
+	font-weight: 700;
+}
+
+/* line 44, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add li .url {
+	font-size: 12px;
+}
+
+/* line 48, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add ul li button.toggle {
+	margin: 0;
+	opacity: 0;
+	float: right;
+	margin-right: -5px;
+}
+
+/* line 55, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
+.settings header button.save .feeds input.add ul li:hover button.toggle {
+	opacity: 1;
+}
+
+/*# sourceMappingURL=../../../css/style.css.map */

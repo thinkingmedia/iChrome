@@ -1,0 +1,21 @@
+/*---------------------------------------------
+ / Main Styles
+*/
+:root {
+	padding: 0!important;
+	font-family: Roboto, sans-serif;
+}
+
+.address {
+    font-size: 24px;
+    text-align: center;
+    color: black;
+}
+.address.loading {
+    color: blue;
+}
+.address.error {
+    color: red !important;
+}
+
+@import "settings";

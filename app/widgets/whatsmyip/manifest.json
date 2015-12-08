@@ -1,13 +1,13 @@
 {
 	"id": 47,
 	"name": "whatsmyip",
-	"model": "model",
-	"css": "style.css",
-	"icon": "icon.png",
+	"model": "js/model",
+	"css": "css/style.css",
+	"icon": "img/icon.png",
 	"sizes": ["variable"],
 
 	"views": {
-		"default": "view"
+		"default": "js/view"
 	},
 
 	"templates": {
