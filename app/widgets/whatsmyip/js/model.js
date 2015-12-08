@@ -24,10 +24,13 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
             WidgetModel.prototype.initialize.call(this);
 
             this.saveData({
-                title: this.config.title || this.defaults.config.title,
-                external: '0.0.0.0',
-				internal: '0.0.0.0'
+                title: this.config.title || this.defaults.config.title
             });
+
+			if(!this.data.external) {
+				this.data.external = '0.0.0.0';
+				this.data.internal = '0.0.0.0';
+			}
         },
 
 		// @todo - this should be done as a service encase there are multiple widgets
