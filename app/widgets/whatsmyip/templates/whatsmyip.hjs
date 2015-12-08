@@ -1,0 +1,4 @@
+<div class="whatsmyip {{state}}">
+    <div class="whatsmyip-external">{{external}}</div>
+    <div class="whatsmyip-internal">{{internal}}</div>
+</div>

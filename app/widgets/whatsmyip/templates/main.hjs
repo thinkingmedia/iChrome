@@ -1,3 +1,0 @@
-<div class="address {{state}}">
-    <span>{{address}}</span>
-</div>

@@ -25,10 +25,12 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
 
             this.saveData({
                 title: this.config.title || this.defaults.config.title,
-                address: '###.###.###.###'
+                external: '0.0.0.0',
+				internal: '0.0.0.0'
             });
         },
 
+		// @todo - this should be done as a service encase there are multiple widgets
         refresh: function () {
             var self = this;
 
@@ -50,7 +52,7 @@ define(["lodash", "jquery", "widgets/model"], function (_, $, WidgetModel) {
                         return;
                     }
 
-                    self.data.address = matches[0];
+                    self.data.external = matches[0];
                     self.saveData();
 
                     console.log(matches);

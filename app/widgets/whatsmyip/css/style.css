@@ -1,29 +1,3 @@
-/*---------------------------------------------
- / Main Styles
-*/
-/* line 4, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
-:root {
-	padding: 0 !important;
-	font-family: Roboto, sans-serif;
-}
-
-/* line 9, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
-.address {
-	font-size: 24px;
-	text-align: center;
-	color: black;
-}
-
-/* line 14, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
-.address.loading {
-	color: blue;
-}
-
-/* line 17, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
-.address.error {
-	color: red !important;
-}
-
 /* line 1, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
 .dark :root.settings form {
 	background: rgba(0, 0, 0, 0.15);
@@ -94,6 +68,41 @@
 /* line 55, E:/work/iChrome/app/widgets/whatsmyip/css/_settings.scss */
 .settings header button.save .feeds input.add ul li:hover button.toggle {
 	opacity: 1;
+}
+
+/*---------------------------------------------
+ / Main Styles
+*/
+/* line 9, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+:root {
+	padding: 0 !important;
+	font-size: 14px;
+	font-family: Roboto, sans-serif;
+}
+
+/* line 15, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+.whatsmyip {
+	font-family: Consolas, Menlo, Monaco, monospace;
+	text-align: center;
+	color: black;
+	/*
+	&.loading {
+		color: blue;
+	}
+	&.error {
+		color: red !important;
+	}
+    */
+}
+
+/* line 21, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+.whatsmyip-external {
+	font-size: 1em;
+}
+
+/* line 24, E:/work/iChrome/app/widgets/whatsmyip/css/style.scss */
+.whatsmyip-internal {
+	font-size: 0.5em;
 }
 
 /*# sourceMappingURL=../../../css/style.css.map */

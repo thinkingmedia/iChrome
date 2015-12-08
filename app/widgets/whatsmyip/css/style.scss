@@ -1,21 +1,36 @@
+@import "colors";
+@import "values";
+
+@import "settings";
+
 /*---------------------------------------------
  / Main Styles
 */
 :root {
 	padding: 0!important;
+	font-size: 14px;
 	font-family: Roboto, sans-serif;
 }
 
-.address {
-    font-size: 24px;
+.whatsmyip {
+	font-family: Consolas, Menlo, Monaco, monospace;
     text-align: center;
-    color: black;
-}
-.address.loading {
-    color: blue;
-}
-.address.error {
-    color: red !important;
-}
 
-@import "settings";
+    color: $ip-font-color;
+
+	&-external {
+		font-size: 1em;
+	}
+	&-internal {
+		font-size: 0.5em;
+	}
+
+    /*
+	&.loading {
+		color: blue;
+	}
+	&.error {
+		color: red !important;
+	}
+    */
+}

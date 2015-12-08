@@ -12,7 +12,7 @@
 
 	"templates": {
 		"desc": "templates/desc.hjs",
-		"default": "templates/main.hjs"
+		"default": "templates/whatsmyip.hjs"
 	},
 
     "settings": [{
