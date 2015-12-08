@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+=======
 /build
 /.sass-cache
+/.idea
+>>>>>>> v3
 lib-cov
 coverage
 .idea
