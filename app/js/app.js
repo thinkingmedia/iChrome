@@ -5,17 +5,20 @@ require.config({
 	baseUrl: "js",
 	paths: {
 		"w": "../widgets",
-		"text": "lib/text",
-		"json": "lib/json",
-		"hogan": "lib/hogan",
+
+		// bower dependencies
+		"text": "bower/text/text",
+		"json": "bower/requirejs-plugins/src/json",
+		"hogan": "bower/hogan.js/web/builds/3.0.2/hogan-3.0.2.min",
+		"lodash": "bower/lodash/lodash.min",
+		"moment": "bower/moment/min/moment.min",
+		"jquery": "bower/jquery/dist/jquery.min",
+		"backbone": "bower/backbone/backbone-min",
+		"jquery.serializejson": "bower/jquery.serializeJSON/jquery.serializejson.min",
+
 		"oauth": "lib/oauth",
-		"lodash": "lib/lodash",
-		"moment": "lib/moment",
-		"jquery": "lib/jquery",
-		"backbone": "lib/backbone",
 		"oauth2": "../oauth2/oauth2",
 		"widgetTemplate": "widgets/registry/template",
-		"jquery.serializejson": "lib/jquery.serializejson",
 		"backbone.viewcollection": "lib/backbone.viewcollection"
 	},
 	map: {

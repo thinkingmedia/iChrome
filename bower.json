@@ -1,0 +1,27 @@
+{
+  "name": "iChrome",
+  "version": "3.0.0",
+  "homepage": "http://www.ichro.me/",
+  "authors": [
+    "Avi Kohn"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower",
+    "build",
+    "tasks"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "text": "~2.0.14",
+    "requirejs-plugins": "~1.0.3",
+    "hogan.js": "hogan#~3.0.2",
+    "lodash": "~3.10.1",
+    "moment": "~2.10.6",
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.3",
+    "jquery.serializeJSON": "~2.7.0"
+  }
+}
