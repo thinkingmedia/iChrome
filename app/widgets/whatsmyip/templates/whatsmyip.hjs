@@ -1,4 +1,10 @@
 <div class="whatsmyip {{state}}">
-    <div class="whatsmyip-external">{{external}}</div>
-    <div class="whatsmyip-internal">{{internal}}</div>
+{{#values}}
+	<div class="whatsmyip-external">{{external}}</div>
+	<div class="whatsmyip-internal">{{internal}}</div>
+{{/values}}
+{{^values}}
+	<div class="whatsmyip-external">0.0.0.0</div>
+	<div class="whatsmyip-internal">0.0.0.0</div>
+{{/values}}
 </div>
